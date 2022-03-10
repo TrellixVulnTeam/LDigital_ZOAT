@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS ldigital;
+CREATE DATABASE ldigital;
