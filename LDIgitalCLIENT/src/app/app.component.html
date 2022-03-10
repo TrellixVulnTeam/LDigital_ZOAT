@@ -1,0 +1,52 @@
+<div class="contenedor-padre">
+<div class="contenedor-formulario">
+  <form class="formulario" (ngSubmit)="onSubmit()" [formGroup]="createPerson">
+    <div class="inputs-formulario">
+      <label for="name" >Nombre</label>
+      <input placeholder="Jean" type="text" id="name" required formControlName="name"/> 
+    </div>
+    <span class="mensaje-error" *ngIf="createPerson.get('name')?.touched && createPerson.get('name')?.errors?.['required']">Este campo es requerido</span>
+
+    <div class="inputs-formulario">
+      <label for="lastname" >Apellido</label>
+      <input placeholder="Garzón" type="text" id="lastname" required formControlName="lastname"/> 
+    </div>
+    <span class="mensaje-error" *ngIf="createPerson.get('lastname')?.touched && createPerson.get('lastname')?.errors?.['required']">Este campo es requerido</span>
+
+    <div class="inputs-formulario">
+      <label for="email" >Correo</label>
+      <input placeholder="micorreo@dominio.com" type="email" id="email" required formControlName="email"/> 
+    </div>
+    <span class="mensaje-error" *ngIf="createPerson.get('email')?.touched && createPerson.get('email')?.errors?.['required']">Este campo es requerido</span>
+    <span class="mensaje-error" *ngIf="createPerson.get('email')?.touched && createPerson.get('email')?.errors?.['email']">No es un correo valido</span>
+      
+    <div class="inputs-formulario">
+      <label for="birth">Fecha de nacimiento</label>
+      <input type="date" id="birth" required formControlName="birth"/> 
+    </div>
+    <span class="mensaje-error" *ngIf="createPerson.get('birth')?.touched && createPerson.get('birth')?.errors?.['required']">Este campo es requerido</span>
+    <div>
+      <button class="crear">Crear</button>
+    </div>
+  </form>
+</div>
+
+<div class="contenedor-cards">
+  <div class="cc" *ngFor="let item of Persons?.data" (click)="openModal()">  
+    <h3>Nombre: {{item.fullname}}</h3>
+    <h4>Correo: {{item.email}}</h4>
+    <h5>Cumpleaños: {{item.birth}}</h5>
+  </div>
+</div>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet></router-outlet>
+<div class="contenedor-clave" *ngIf="modalSwitch"> <app-modal></app-modal></div>
+</div>
