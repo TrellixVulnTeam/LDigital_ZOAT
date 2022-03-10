@@ -7,5 +7,5 @@ jobs:
       - image: circleci/node:14.16.1
     steps:
       - checkout
-      - run: ng server --o
+      - run: ng serve --o
       - run: ng test
