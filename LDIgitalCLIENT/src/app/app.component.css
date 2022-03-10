@@ -1,0 +1,105 @@
+.contenedor-padre{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    background-color: rgb(192, 185, 255)
+}
+
+.contenedor-formulario {
+    padding: 1%;
+    background-color: rgb(0, 26, 95);
+    width: 25%;
+    height: 50%;
+    border-radius: 2%;
+    margin-left: 5%;
+    margin-top: 3%;
+    margin-right: 5%;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%
+}
+
+.inputs-formulario {
+    width: 100%;
+    margin-bottom: 3%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputs-formulario label {
+    width: 38%;
+    color: bisque;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.inputs-formulario input {
+    width: 55%;
+    height: 20%;
+    background-color: rgb(212, 208, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border: none;
+    border-bottom: solid 0.2rem rgb(146, 131, 46);
+}
+
+.mensaje-error {
+    color: red;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.crear {
+    margin-top: 0.2rem;
+    background-color: rgb(146, 131, 46);
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.4rem 1rem;
+    color: bisque;
+    border-radius: 0.2rem;
+}
+
+.crear:hover {
+    color: rgb(146, 131, 46);
+    background-color: bisque;
+}
+
+.contenedor-cards {
+    margin-top: 3%;
+    width: 62%;
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+
+
+.cc {
+    margin: 0.5rem;
+    background-color: rgba(255, 166, 0, 0.644);
+    width: 31%;
+    border:none;
+    border-radius: 3%;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding : 0rem 0.0rem;
+}
+.cc:hover {
+    background-color: rgb(255, 166, 0);
+}
+
+h3 {
+    margin-bottom: 0;
+}
+h4 {
+    margin-bottom: 0;
+}
+
